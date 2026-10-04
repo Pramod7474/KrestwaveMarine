@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Krestwave Marine provides IT infrastructure, maritime connectivity, cybersecurity, navigation IT and onboard IT support for vessels.">
+<title>Krestwave Marine | Smart IT Solutions for Maritime Vessels</title>
+<style>
+:root{
+  --navy:#061a33; --blue:#087fd1; --cyan:#27c7f4; --white:#fff;
+  --light:#f4f8fc; --text:#17324d; --muted:#64788c; --gold:#e7b94f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6;background:#fff}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(6,26,51,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.12)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800;letter-spacing:1px}
+.brand-mark{width:45px;height:30px;position:relative}
+.brand-mark:before,.brand-mark:after{content:"";position:absolute;border-radius:50%;border-top:5px solid var(--cyan);width:44px;height:18px;transform:rotate(-8deg)}
+.brand-mark:before{top:1px}.brand-mark:after{top:10px;width:34px;left:7px;border-top-color:#0d8de0}
+.brand span{display:block}.brand small{font-size:11px;color:#8edcff;letter-spacing:3px}
+nav ul{display:flex;gap:28px;list-style:none;color:#dcecff;font-size:14px}
+nav a:hover{color:var(--cyan)}
+.menu{display:none;color:#fff;font-size:26px;cursor:pointer}
+.hero{min-height:760px;padding-top:78px;display:flex;align-items:center;position:relative;overflow:hidden;background:
+linear-gradient(90deg,rgba(4,19,38,.96) 0%,rgba(4,19,38,.78) 45%,rgba(4,19,38,.25) 100%),
+linear-gradient(135deg,#061a33 0%,#0b4772 52%,#078fc8 100%)}
+.hero:after{content:"";position:absolute;right:-10%;bottom:-30%;width:70%;height:70%;border-radius:50%;border:1px solid rgba(255,255,255,.12);box-shadow:0 0 0 40px rgba(255,255,255,.025),0 0 0 80px rgba(255,255,255,.018)}
+.hero-content{position:relative;z-index:2;color:#fff;max-width:730px}
+.kicker{color:#7ddfff;text-transform:uppercase;font-size:13px;font-weight:700;letter-spacing:3px;margin-bottom:18px}
+h1{font-size:clamp(42px,6vw,76px);line-height:1.04;margin-bottom:22px;letter-spacing:-2px}
+.hero p{font-size:19px;color:#d9e9f6;max-width:650px;margin-bottom:34px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:14px 23px;border-radius:6px;font-weight:700;display:inline-block;transition:.2s}
+.primary{background:var(--cyan);color:#06203b}.primary:hover{transform:translateY(-2px);background:#57d8fa}
+.secondary{border:1px solid rgba(255,255,255,.45);color:#fff}.secondary:hover{background:#fff;color:var(--navy)}
+.trust{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.22);border-top:1px solid rgba(255,255,255,.12);z-index:3}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:22px 0;color:#fff;text-align:center}
+.trust strong{display:block;font-size:22px}.trust span{font-size:12px;color:#c5d8e8}
+section{padding:90px 0}.light{background:var(--light)}
+.section-head{max-width:720px;margin-bottom:45px}.eyebrow{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(32px,4vw,48px);line-height:1.12;color:var(--navy);margin-bottom:16px}
+.section-head p{color:var(--muted)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-card{background:linear-gradient(145deg,#061a33,#0a5c8c);min-height:390px;border-radius:18px;padding:35px;color:#fff;position:relative;overflow:hidden}
+.about-card:before{content:"";position:absolute;width:300px;height:300px;border:1px solid rgba(255,255,255,.16);border-radius:50%;right:-80px;bottom:-100px}
+.ship{font-size:80px;margin-top:45px}.about-card h3{font-size:27px;margin-top:10px}.about-card p{color:#cce2ef}
+.about-copy p{margin-bottom:20px;color:var(--muted)}
+.checks{display:grid;gap:10px;margin-top:22px}.checks div{font-weight:700}.checks div:before{content:"✓";color:var(--blue);margin-right:10px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{padding:28px;border:1px solid #dce8f1;border-radius:12px;background:#fff;transition:.25s}
+.service:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgba(6,44,75,.09);border-color:#9edcf5}
+.icon{font-size:30px;margin-bottom:15px}.service h3{color:var(--navy);margin-bottom:9px}.service p{color:var(--muted);font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{border:1px solid rgba(255,255,255,.13);padding:22px 15px;border-radius:10px;background:rgba(255,255,255,.04)}.step b{color:var(--cyan);font-size:24px}.step h3{font-size:15px;margin:8px 0}.step p{font-size:12px;color:#b9cfdf}
+.cta{padding:70px 0;background:linear-gradient(100deg,#087fd1,#061a33);color:#fff}.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{color:#fff;margin:0}.cta p{color:#d3e6f4;margin-top:8px}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.project{border-radius:12px;overflow:hidden;background:#fff;border:1px solid #dce8f1}.project-top{height:160px;background:linear-gradient(135deg,#06203b,#0c83bd);display:flex;align-items:center;justify-content:center;font-size:65px}.project-top img{width:100%;height:100%;object-fit:cover;display:block}.project-body{padding:22px}.project-body h3{color:var(--navy);margin-bottom:8px}.project-body p{font-size:14px;color:var(--muted)}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px}.contact-info p{color:var(--muted);margin-bottom:25px}.contact-item{margin:18px 0}.contact-item small{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:1px}.contact-item strong{color:var(--navy)}
+form{background:#f5f9fc;padding:30px;border-radius:14px}.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{font-size:12px;font-weight:700;color:var(--navy);display:block;margin-bottom:6px}input,textarea,select{width:100%;padding:13px;border:1px solid #d5e2eb;border-radius:6px;background:#fff;font:inherit;margin-bottom:16px}textarea{min-height:120px;resize:vertical}
+footer{background:#031225;color:#a9c0d2;padding:45px 0 25px}.footer-top{display:flex;justify-content:space-between;gap:30px;padding-bottom:30px}.footer-brand{color:#fff}.footer-brand p{max-width:400px;margin-top:12px;font-size:14px}.footer-links{display:flex;gap:25px;align-items:flex-start}.footer-links a:hover{color:#fff}.copyright{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;font-size:12px;display:flex;justify-content:space-between}
+@media(max-width:850px){nav{display:none}.menu{display:block}.about,.contact{grid-template-columns:1fr}.services,.projects{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.trust-grid{grid-template-columns:repeat(2,1fr);gap:15px}.cta-inner,.footer-top{flex-direction:column;align-items:flex-start}}
+@media(max-width:560px){.hero{min-height:700px}.hero p{font-size:16px}.services,.projects,.steps,.row{grid-template-columns:1fr}.trust-grid{grid-template-columns:1fr 1fr}section{padding:65px 0}.nav{height:68px}.brand{font-size:14px}}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<a href="#home" class="brand"><i class="brand-mark"></i><div><span>KRESTWAVE</span><small>MARINE</small></div></a>
+<nav><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<div class="menu" onclick="document.querySelector('nav').style.display=document.querySelector('nav').style.display==='block'?'none':'block'">☰</div>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-content">
+<div class="kicker">IT Services for Maritime Vessels</div>
+<h1>Smart IT Solutions for Maritime Vessels.</h1>
+<p>Reliable vessel IT infrastructure, connectivity, cybersecurity, navigation IT and onboard support — helping maritime operations stay connected, secure and efficient.</p>
+<div class="btns"><a class="btn primary" href="#services">Explore Services</a><a class="btn secondary" href="#contact">Request a Quote</a></div>
+</div>
+<div class="trust"><div class="container trust-grid"><div><strong>24/7</strong><span>Remote IT Support</span></div><div><strong>⚓</strong><span>Vessel-Focused Expertise</span></div><div><strong>🛡</strong><span>Cybersecurity Ready</span></div><div><strong>🛰</strong><span>Connectivity Solutions</span></div></div></div>
+</section>
+
+<section id="about">
+<div class="container about">
+<div class="about-card"><div class="ship">🚢</div><h3>Technology Built for Life at Sea</h3><p>Practical IT solutions designed around the realities of shipboard operations.</p></div>
+<div class="about-copy"><div class="eyebrow">About Krestwave Marine</div><h2>Keeping vessels connected, protected and operational.</h2><p>Krestwave Marine provides IT services and technology solutions specifically for maritime vessels and ship management operations.</p><p>From onboard infrastructure and network deployment to vessel connectivity, cybersecurity, navigation applications and remote support, our focus is simple: dependable technology that works at sea.</p><div class="checks"><div>Vessel IT infrastructure & support</div><div>Connectivity and crew welfare solutions</div><div>Cybersecurity and endpoint protection</div><div>Navigation and marine application support</div><div>IT hardware supply to vessels at ports across India</div></div></div>
+</div>
+</section>
+
+<section class="light" id="services">
+<div class="container">
+<div class="section-head"><div class="eyebrow">Our Services</div><h2>Complete IT support for maritime operations.</h2><p>From the server room to the bridge, Krestwave Marine supports the technology your vessel depends on.</p></div>
+<div class="services">
+<div class="service"><div class="icon">⚓</div><h3>Vessel IT Infrastructure</h3><p>Servers, workstations, switches, firewalls, NAS, domains, Active Directory and onboard IT deployment.</p></div>
+<div class="service"><div class="icon">🛰️</div><h3>VSAT & Connectivity</h3><p>VSAT, Starlink, OneWeb, Inmarsat/FBB, business networks and crew Wi‑Fi connectivity solutions.</p></div>
+<div class="service"><div class="icon">🛡️</div><h3>Cybersecurity</h3><p>Endpoint protection, vulnerability management, network security and cybersecurity monitoring for vessels.</p></div>
+<div class="service"><div class="icon">💻</div><h3>Onboard IT Support</h3><p>Onboard IT infrastructure setup, VSAT installations, Starlink and OneWeb installations, troubleshooting and technical support.</p></div>
+<div class="service"><div class="icon">🗺️</div><h3>Navigation IT</h3><p>Navigation applications, ENC and chart management, ECDIS support and maritime software deployment.</p></div>
+<div class="service"><div class="icon">📊</div><h3>Marine Applications</h3><p>PMS, marine ERP, vessel applications, data services and operational technology support.</p></div>
+</div>
+</div>
+</section>
+
+
+
+<section id="projects">
+<div class="container">
+<div class="section-head"><div class="eyebrow">Project Experience</div><h2>Practical maritime IT delivery.</h2><p>Our vessel IT infrastructure, connectivity, installation and support projects. Add your project photographs as <strong>images/project-01.jpg</strong>, <strong>project-02.jpg</strong>, <strong>project-03.jpg</strong>, and additional gallery images as required.</p></div>
+<div class="projects">
+<div class="project"><div class="project-top"><img src="images/project-01.jpg" alt="Vessel IT Infrastructure Project"></div><div class="project-body"><h3>Vessel IT Infrastructure</h3><p>Onboard IT infrastructure installation, configuration, networking and technical support.</p></div></div>
+<div class="project"><div class="project-top"><img src="images/project-02.jpg" alt="VSAT and Starlink Installation"></div><div class="project-body"><h3>VSAT & Starlink Installation</h3><p>Connectivity installation, configuration, integration and troubleshooting onboard vessels.</p></div></div>
+<div class="project"><div class="project-top"><img src="images/project-03.jpg" alt="Marine IT Support Project"></div><div class="project-body"><h3>Marine IT Support</h3><p>Onboard technical support, hardware deployment, navigation IT and vessel IT services.</p></div></div>
+</div>
+</div>
+</section>
+
+<div class="cta"><div class="container cta-inner"><div><h2>Need reliable IT support for your vessel?</h2><p>Let's discuss your vessel's IT and connectivity requirements.</p></div><a class="btn primary" href="#contact">Contact Krestwave Marine</a></div></div>
+
+<section id="contact">
+<div class="container contact">
+<div class="contact-info"><div class="eyebrow">Contact Us</div><h2>Let's keep your vessel connected.</h2><p>Tell us what your vessel needs and our team can discuss the right IT solution.</p>
+<div class="contact-item"><small>Email</small><strong>sales@krestwavemarine.com</strong></div>
+<div class="contact-item"><small>Company</small><strong>Krestwave Marine</strong></div>
+<div class="contact-item"><small>Services</small><strong>Maritime IT • Connectivity • Cybersecurity</strong></div>
+</div>
+<form onsubmit="event.preventDefault(); alert('Thank you. Please email sales@krestwavemarine.com with your vessel requirements.');">
+<div class="row"><div><label>Name</label><input required placeholder="Your name"></div><div><label>Company</label><input placeholder="Company name"></div></div>
+<div class="row"><div><label>Email</label><input type="email" required placeholder="you@company.com"></div><div><label>Vessel Name</label><input placeholder="Vessel name"></div></div>
+<label>Service Required</label><select><option>Vessel IT Infrastructure</option><option>VSAT & Connectivity</option><option>Cybersecurity</option><option>Onboard IT Support</option><option>Navigation IT</option><option>Other</option></select>
+<label>Message</label><textarea placeholder="Tell us about your requirement"></textarea>
+<button class="btn primary" type="submit">Send Enquiry</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container">
+<div class="footer-top"><div class="footer-brand"><div class="brand"><i class="brand-mark"></i><div><span>KRESTWAVE</span><small>MARINE</small></div></div><p>Smart IT solutions for maritime vessels — connecting vessels, protecting data and enabling operations.</p></div>
+<div class="footer-links"><a href="#services">Services</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></div>
+<div class="copyright"><span>© 2026 Krestwave Marine. All rights reserved.</span><span>sales@krestwavemarine.com</span></div>
+</div>
+</footer>
+</body>
+</html>
+add in About tab
+existing text is ok but add We supplying hardware to vessel all ports in India
+
+Remove Takeover tab
+
+In Project Tab I need to upload all existing pictures
+
+In service tab
+
+Onboard IT Support we attend vessels for onboard IT infrastructure  setup, VSAT installations, Starlink & Oneweb installations.
+
+
+all other things are ok
+
+
+
